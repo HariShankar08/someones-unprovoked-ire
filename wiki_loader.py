@@ -2,7 +2,7 @@ from datasets import load_dataset
 from tqdm import tqdm
 
 ds = load_dataset('wikimedia/wikipedia', '20231101.en', split='train', streaming=True)
-ds = ds.take(100_000)
+ds = ds.take(1_000)
 
 
 for example in tqdm(ds, desc=f"Writing files:"):
